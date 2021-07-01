@@ -32,7 +32,7 @@ project.afterEvaluate {
                 group = 'Reporting'
                 description = "Generate Jacoco coverage reports for the ${sourceName.capitalize()} build."
 
-                classDirectories = fileTree(
+                getClassDirectories().setFrom(
                         dir: "${project.buildDir}/intermediates/classes/${sourcePath}",
                         excludes: ['**/R.class',
                                    '**/R$*.class',
@@ -54,9 +54,9 @@ project.afterEvaluate {
                         "src/$buildTypeName/java"
                 ]
 
-                additionalSourceDirs = files(coverageSourceDirs)
-                sourceDirectories = files(coverageSourceDirs)
-                executionData = files("${project.buildDir}/jacoco/${testTaskName}.exec")
+                getAdditionalSourceDirs().setFrom(coverageSourceDirs)
+                getClassDirectories().from(coverageSourceDirs)
+                getExecutionData().from("${project.buildDir}/jacoco/${testTaskName}.exec")
 
                 reports {
                     xml.enabled = true

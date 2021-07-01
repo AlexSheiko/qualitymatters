@@ -1,16 +1,17 @@
-apply plugin: 'com.android.application'
-apply plugin: 'hu.supercluster.paperwork'
-apply from: '../code_quality_tools/jacoco.gradle'
-apply plugin: 'com.frogermcs.androiddevmetrics'
-apply from: '../code_quality_tools/quality.gradle'
-apply plugin: 'com.github.ben-manes.versions'
-
-paperwork {
-    set = [
-            gitSha   : gitSha(),
-            buildDate: buildTime("dd-MM-yyyy HH:00:00 z", "UTC"),
-    ]
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
 }
+
+apply from: '../code_quality_tools/jacoco.gradle'
+apply from: '../code_quality_tools/quality.gradle'
+
+//paperwork {
+//    set = [
+//            gitSha   : gitSha(),
+//            buildDate: buildTime("dd-MM-yyyy HH:00:00 z", "UTC"),
+//    ]
+//}
 
 android {
     // Declared in dependencies.gradle in the root of the project.

@@ -16,6 +16,8 @@ buildscript {
 
         classpath gradlePlugins.android
 
+        classpath gradlePlugins.kotlin
+
         // Generates build info without breaking incremental builds.
         classpath gradlePlugins.paperwork
 
@@ -33,9 +35,6 @@ buildscript {
 
         // Check latest version of dependencies, task: dependencyUpdates
         classpath gradlePlugins.versions
-
-        // Analyse builds to profile
-        classpath gradlePlugins.buildScan
     }
 }
 
@@ -73,15 +72,13 @@ subprojects {
 
     afterEvaluate {
         tasks.findByName('pmd').dependsOn('assemble')
-        tasks.findByName('findbugs').dependsOn('assemble')
 
         def checkTask = tasks.findByName('check')
 
         checkTask.dependsOn('pmd')
-        checkTask.dependsOn('findbugs')
         checkTask.dependsOn('checkstyle')
 
-        dependencyUpdates.outputDir = new File("${projectDir}/build/reports/versions")
+//        dependencyUpdates.outputDir = new File("${projectDir}/build/reports/versions")
 
         // Log instrumentation tests results.
         tasks.withType(com.android.build.gradle.internal.tasks.AndroidTestTask) { task ->
@@ -93,10 +90,4 @@ subprojects {
             }
         }
     }
-}
-
-apply plugin: 'com.gradle.build-scan'
-buildScan {
-    licenseAgreementUrl = 'https://gradle.com/terms-of-service'
-    licenseAgree = 'yes'
 }

@@ -12,27 +12,6 @@ task pmd(type: Pmd) {
     source = fileTree('src/main/java')
 }
 
-plugins.apply('findbugs')
-
-task findbugs(type: FindBugs) {
-    ignoreFailures = false // Fail early.
-    effort = 'max'
-    reportLevel = 'low' // Report even low priority problems.
-
-    reports {
-        html.enabled = true
-        xml.enabled = false
-    }
-
-    classes = files("${project.projectDir}/build/intermediates/classes")
-    source = fileTree('src/main/java')
-
-    // If somebody has an idea how to make this work with support libraries -> open a PR please.
-    classpath = files()
-
-    excludeFilter = new File("${project.rootDir}/code_quality_tools/findbugs-filter.xml")
-}
-
 plugins.apply('checkstyle')
 
 checkstyle {

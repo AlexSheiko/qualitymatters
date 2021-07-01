@@ -2,12 +2,13 @@ ext.versions = [
         code                         : 1,
         name                         : '1.0',
 
-        minSdk                       : 16,
-        targetSdk                    : 23,
-        compileSdk                   : 23,
-        buildTools                   : '26.0.2',
+        minSdk                       : 21,
+        targetSdk                    : 30,
+        compileSdk                   : 30,
+        buildTools                   : '30.0.3',
 
-        androidGradlePlugin          : '3.0.0',
+        androidGradlePlugin          : '4.2.1',
+        kotlinGradlePlugin           : '1.5.20',
         paperworkGradlePlugin        : '1.2.7',
         jacocoGradlePlugin           : '0.7.6.201602180812',
         androidDevMetricsGradlePlugin: '0.4',
@@ -15,7 +16,6 @@ ext.versions = [
         errorProneCoreVersion        : '2.0.9',
         dexcountPlugin               : '0.6.1',
         versionsGradlePlugin         : '0.13.0',
-        buildScan                    : '1.10',
 
         dagger                       : '2.6',
 
@@ -28,7 +28,7 @@ ext.versions = [
         gson                         : '2.7',
         autoValue                    : '1.2',
         autoValueGson                : '0.4.2',
-        butterKnife                  : '83c0e1df66',
+        butterKnife                  : '8.8.1',
         picasso                      : '2.5.2',
         picassoOkHttpDownloader      : '1.0.2',
         timber                       : '4.6.0',
@@ -51,13 +51,13 @@ ext.versions = [
 
 ext.gradlePlugins = [
         android          : "com.android.tools.build:gradle:$versions.androidGradlePlugin",
+        kotlin           : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinGradlePlugin",
         paperwork        : "hu.supercluster:paperwork-plugin:$versions.paperworkGradlePlugin",
         jacoco           : "org.jacoco:org.jacoco.core:$versions.jacocoGradlePlugin",
         androidDevMetrics: "com.frogermcs.androiddevmetrics:androiddevmetrics-plugin:$versions.androidDevMetricsGradlePlugin",
         errorProne       : "net.ltgt.gradle:gradle-errorprone-plugin:$versions.errorProneGradlePlugin",
         dexcount         : "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$versions.dexcountPlugin",
         versions         : "com.github.ben-manes:gradle-versions-plugin:$versions.versionsGradlePlugin",
-        buildScan        : "com.gradle:build-scan-plugin:$versions.buildScan"
 ]
 
 ext.libraries = [
