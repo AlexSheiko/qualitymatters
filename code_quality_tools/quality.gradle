@@ -15,7 +15,7 @@ task pmd(type: Pmd) {
 plugins.apply('checkstyle')
 
 checkstyle {
-    toolVersion = '6.16.1'
+    toolVersion = '8.44'
 }
 
 task checkstyle(type: Checkstyle) {

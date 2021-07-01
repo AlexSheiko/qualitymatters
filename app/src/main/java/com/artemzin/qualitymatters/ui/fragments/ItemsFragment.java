@@ -8,8 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.OnClick;
 import com.artemzin.qualitymatters.QualityMattersApp;
 import com.artemzin.qualitymatters.R;
 import com.artemzin.qualitymatters.api.entities.Item;
@@ -36,13 +34,13 @@ import static android.view.View.VISIBLE;
 import static androidx.recyclerview.widget.LinearLayoutManager.VERTICAL;
 
 public class ItemsFragment extends BaseFragment implements ItemsView {
-    @BindView(R.id.items_loading_ui)
+//    @BindView(R.id.items_loading_ui)
     View loadingUiView;
 
-    @BindView(R.id.items_loading_error_ui)
+    //    @BindView(R.id.items_loading_error_ui)
     View errorUiView;
 
-    @BindView(R.id.items_content_ui)
+    //    @BindView(R.id.items_content_ui)
     RecyclerView contentUiRecyclerView;
 
     ItemsAdapter itemsAdapter;
@@ -72,6 +70,10 @@ public class ItemsFragment extends BaseFragment implements ItemsView {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 //        unbinder = ButterKnife.bind(this, view);
+        loadingUiView = view.findViewById(R.id.items_loading_ui);
+        errorUiView = view.findViewById(R.id.items_loading_error_ui);
+        contentUiRecyclerView = view.findViewById(R.id.items_content_ui);
+
         contentUiRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), VERTICAL, false));
         contentUiRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration((int) getResources().getDimension(R.dimen.list_item_vertical_space_between_items)));
         itemsAdapter = new ItemsAdapter(getActivity().getLayoutInflater(), networkBitmapClient);
@@ -120,7 +122,7 @@ public class ItemsFragment extends BaseFragment implements ItemsView {
         });
     }
 
-    @OnClick(R.id.items_loading_error_try_again_button)
+    //    @OnClick(R.id.items_loading_error_try_again_button)
     void onTryAgainButtonClick() {
         itemsPresenter.reloadData();
     }

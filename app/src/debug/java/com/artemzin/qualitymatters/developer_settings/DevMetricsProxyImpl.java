@@ -2,8 +2,7 @@ package com.artemzin.qualitymatters.developer_settings;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
-
-//import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
+import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 
 public class DevMetricsProxyImpl implements DevMetricsProxy {
 
@@ -16,6 +15,6 @@ public class DevMetricsProxyImpl implements DevMetricsProxy {
 
   @Override
   public void apply() {
-//    AndroidDevMetrics.initWith(application);
+    AndroidDevMetrics.initWith(application);
   }
 }

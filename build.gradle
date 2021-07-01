@@ -16,8 +16,6 @@ buildscript {
 
         classpath gradlePlugins.android
 
-        classpath gradlePlugins.kotlin
-
         // Generates build info without breaking incremental builds.
         classpath gradlePlugins.paperwork
 
@@ -28,13 +26,15 @@ buildscript {
         classpath gradlePlugins.androidDevMetrics
 
         // Catches common Java mistakes as compile-time errors.
-        classpath gradlePlugins.errorProne
+//        classpath gradlePlugins.errorProne
 
         // Method count plugin for android projects
         classpath gradlePlugins.dexcount
 
         // Check latest version of dependencies, task: dependencyUpdates
         classpath gradlePlugins.versions
+
+        classpath gradlePlugins.butterknife
     }
 }
 
@@ -65,11 +65,11 @@ subprojects {
         }
     }
 
-    project.plugins.apply('net.ltgt.errorprone')
+//    project.plugins.apply('net.ltgt.errorprone')
 
-    configurations.errorprone {
-        resolutionStrategy.force "com.google.errorprone:error_prone_core:${versions.errorProneCoreVersion}"
-    }
+//    configurations.errorprone {
+//        resolutionStrategy.force "com.google.errorprone:error_prone_core:${versions.errorProneCoreVersion}"
+//    }
 
     afterEvaluate {
         tasks.findByName('pmd').dependsOn('assemble')

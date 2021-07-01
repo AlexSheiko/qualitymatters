@@ -1,9 +1,1 @@
-pluginManagement {
-    plugins {
-        id 'hu.supercluster.paperwork' version '${versions.paperworkGradlePlugin}'
-        id 'com.frogermcs.androiddevmetrics' version '${versions.androidDevMetricsGradlePlugin}'
-        id 'com.github.ben-manes.versions' version '${versions.versions}'
-    }
-}
-
 include ':app'

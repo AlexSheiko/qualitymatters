@@ -14,7 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
-import butterknife.*;
 import com.artemzin.qualitymatters.QualityMattersApp;
 import com.artemzin.qualitymatters.R;
 import com.artemzin.qualitymatters.performance.AnyThread;
@@ -38,28 +37,28 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
     @Inject
     LynxConfig lynxConfig;
 
-    @BindView(R.id.developer_settings_git_sha_text_view)
+//    @BindView(R.id.developer_settings_git_sha_text_view)
     TextView gitShaTextView;
 
-    @BindView(R.id.developer_settings_build_date_text_view)
+    //    @BindView(R.id.developer_settings_build_date_text_view)
     TextView buildDateTextView;
 
-    @BindView(R.id.developer_settings_build_version_code_text_view)
+    //    @BindView(R.id.developer_settings_build_version_code_text_view)
     TextView buildVersionCodeTextView;
 
-    @BindView(R.id.developer_settings_build_version_name_text_view)
+    //    @BindView(R.id.developer_settings_build_version_name_text_view)
     TextView buildVersionNameTextView;
 
-    @BindView(R.id.developer_settings_stetho_switch)
+    //    @BindView(R.id.developer_settings_stetho_switch)
     Switch stethoSwitch;
 
-    @BindView(R.id.developer_settings_leak_canary_switch)
+    //    @BindView(R.id.developer_settings_leak_canary_switch)
     Switch leakCanarySwitch;
 
-    @BindView(R.id.developer_settings_tiny_dancer_switch)
+    //    @BindView(R.id.developer_settings_tiny_dancer_switch)
     Switch tinyDancerSwitch;
 
-    @BindView(R.id.developer_settings_http_logging_level_spinner)
+    //    @BindView(R.id.developer_settings_http_logging_level_spinner)
     Spinner httpLoggingLevelSpinner;
 
 //    @SuppressWarnings("NullableProblems")
@@ -81,11 +80,19 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        unbinder = ButterKnife.bind(this, view);
+
+        gitShaTextView = view.findViewById(R.id.developer_settings_git_sha_text_view);
+        buildDateTextView = view.findViewById(R.id.developer_settings_build_date_text_view);
+        buildVersionCodeTextView = view.findViewById(R.id.developer_settings_build_version_code_text_view);
+        buildVersionNameTextView = view.findViewById(R.id.developer_settings_build_version_name_text_view);
+        stethoSwitch = view.findViewById(R.id.developer_settings_stetho_switch);
+        leakCanarySwitch = view.findViewById(R.id.developer_settings_leak_canary_switch);
+        tinyDancerSwitch = view.findViewById(R.id.developer_settings_tiny_dancer_switch);
+        httpLoggingLevelSpinner = view.findViewById(R.id.developer_settings_http_logging_level_spinner);
 
         httpLoggingLevelSpinner
                 .setAdapter(new DeveloperSettingsSpinnerAdapter<>(getActivity().getLayoutInflater())
-                .setSelectionOptions(HttpLoggingLevel.allValues()));
+                        .setSelectionOptions(HttpLoggingLevel.allValues()));
 
         presenter.bindView(this);
     }
@@ -96,22 +103,22 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
         presenter.syncDeveloperSettings();
     }
 
-    @OnCheckedChanged(R.id.developer_settings_stetho_switch)
+    //    @OnCheckedChanged(R.id.developer_settings_stetho_switch)
     void onStethoSwitchCheckedChanged(boolean checked) {
         presenter.changeStethoState(checked);
     }
 
-    @OnCheckedChanged(R.id.developer_settings_tiny_dancer_switch)
+    //    @OnCheckedChanged(R.id.developer_settings_tiny_dancer_switch)
     void onTinyDancerSwitchCheckedChanged(boolean checked) {
         presenter.changeTinyDancerState(checked);
     }
 
-    @OnItemSelected(R.id.developer_settings_http_logging_level_spinner)
+    //    @OnItemSelected(R.id.developer_settings_http_logging_level_spinner)
     void onHttpLoggingLevelChanged(int position) {
         presenter.changeHttpLoggingLevel(((HttpLoggingLevel) httpLoggingLevelSpinner.getItemAtPosition(position)).loggingLevel);
     }
 
-    @OnClick(R.id.developer_settings_restart_app_button)
+    //    @OnClick(R.id.developer_settings_restart_app_button)
     void onRestartAppClick() {
         final FragmentActivity activity = getActivity();
         ProcessPhoenix.triggerRebirth(activity, new Intent(activity, activity.getClass()));
@@ -204,7 +211,7 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
         runOnUiThreadIfFragmentAlive(() -> Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show());
     }
 
-    @OnCheckedChanged(R.id.developer_settings_leak_canary_switch)
+    //    @OnCheckedChanged(R.id.developer_settings_leak_canary_switch)
     void onLeakCanarySwitchCheckedChanged(boolean checked) {
         presenter.changeLeakCanaryState(checked);
     }
@@ -216,7 +223,7 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
         runOnUiThreadIfFragmentAlive(() -> Toast.makeText(getContext(), "To apply new settings app needs to be restarted", Toast.LENGTH_LONG).show());
     }
 
-    @OnClick(R.id.b_show_log)
+    //    @OnClick(R.id.b_show_log)
     void showLog() {
         Context context = getActivity();
         context.startActivity(LynxActivity.getIntent(context, lynxConfig));
