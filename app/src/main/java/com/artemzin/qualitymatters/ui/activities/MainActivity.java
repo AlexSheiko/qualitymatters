@@ -2,8 +2,7 @@ package com.artemzin.qualitymatters.ui.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-
+import androidx.annotation.Nullable;
 import com.artemzin.qualitymatters.QualityMattersApp;
 import com.artemzin.qualitymatters.R;
 import com.artemzin.qualitymatters.ui.fragments.ItemsFragment;

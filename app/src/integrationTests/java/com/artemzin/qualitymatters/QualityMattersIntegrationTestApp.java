@@ -1,8 +1,7 @@
 package com.artemzin.qualitymatters;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.developer_settings.DevMetricsProxy;
 import com.artemzin.qualitymatters.developer_settings.DeveloperSettingsModule;
 import com.artemzin.qualitymatters.models.AnalyticsModel;

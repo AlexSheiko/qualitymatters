@@ -1,7 +1,6 @@
 package com.artemzin.qualitymatters.other;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.performance.AsyncJob;
 import com.artemzin.qualitymatters.performance.AsyncJobsObserver;
 

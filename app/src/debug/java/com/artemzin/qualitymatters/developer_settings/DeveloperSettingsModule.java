@@ -1,20 +1,18 @@
 package com.artemzin.qualitymatters.developer_settings;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.models.AnalyticsModel;
 import com.artemzin.qualitymatters.ui.other.ViewModifier;
 import com.artemzin.qualitymatters.ui.presenters.DeveloperSettingsPresenter;
 import com.github.pedrovgs.lynx.LynxConfig;
-
-import javax.inject.Named;
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import hu.supercluster.paperwork.Paperwork;
 import okhttp3.logging.HttpLoggingInterceptor;
+
+import javax.inject.Named;
+import javax.inject.Singleton;
 
 import static android.content.Context.MODE_PRIVATE;
 

@@ -1,13 +1,11 @@
 package com.artemzin.qualitymatters.functional_tests.rules;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.artemzin.qualitymatters.functional_tests.TestUtils;
 import com.artemzin.qualitymatters.performance.AsyncJobsObserver;
-
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;

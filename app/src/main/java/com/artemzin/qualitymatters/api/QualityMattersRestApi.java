@@ -1,16 +1,15 @@
 package com.artemzin.qualitymatters.api;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.api.entities.Item;
-
-import java.util.List;
-
 import retrofit2.http.GET;
 import rx.Single;
 
+import java.util.List;
+
 public interface QualityMattersRestApi {
 
-    @GET("items") @NonNull
+    @GET("items")
+    @NonNull
     Single<List<Item>> items();
 }

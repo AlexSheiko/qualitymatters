@@ -1,8 +1,7 @@
 package com.artemzin.qualitymatters.models;
 
-import android.support.annotation.NonNull;
 import android.widget.ImageView;
-
+import androidx.annotation.NonNull;
 import com.squareup.picasso.Picasso;
 
 public class PicassoImageLoader implements QualityMattersImageLoader {

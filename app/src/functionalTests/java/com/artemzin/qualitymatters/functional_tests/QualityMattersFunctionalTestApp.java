@@ -1,13 +1,11 @@
 package com.artemzin.qualitymatters.functional_tests;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.DaggerApplicationComponent;
 import com.artemzin.qualitymatters.QualityMattersApp;
 import com.artemzin.qualitymatters.models.AnalyticsModel;
 import com.artemzin.qualitymatters.models.ModelsModule;
-
 import timber.log.Timber;
 
 public class QualityMattersFunctionalTestApp extends QualityMattersApp {

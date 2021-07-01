@@ -1,6 +1,6 @@
 package com.artemzin.qualitymatters.functional_tests.rules;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

@@ -1,18 +1,16 @@
 package com.artemzin.qualitymatters.developer_settings;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.BuildConfig;
 import com.codemonkeylabs.fpslibrary.TinyDancer;
 import com.facebook.stetho.Stetho;
-
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import hu.supercluster.paperwork.Paperwork;
 import okhttp3.logging.HttpLoggingInterceptor;
 import timber.log.Timber;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static android.view.Gravity.START;
 import static android.view.Gravity.TOP;

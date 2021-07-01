@@ -150,10 +150,10 @@
                 android:text="Http logging level"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/developer_settings_http_logging_level_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/developer_settings_http_logging_level_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
         </LinearLayout>
 

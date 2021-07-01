@@ -1,16 +1,13 @@
 package com.artemzin.qualitymatters.functional_tests.rules;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.functional_tests.TestUtils;
-
+import okhttp3.mockwebserver.MockWebServer;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 
 import java.lang.reflect.Method;
-
-import okhttp3.mockwebserver.MockWebServer;
 
 /**
  * JUnit test rule for mocking web server!

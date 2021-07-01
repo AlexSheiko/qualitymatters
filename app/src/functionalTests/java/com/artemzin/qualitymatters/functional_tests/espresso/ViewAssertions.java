@@ -1,8 +1,8 @@
 package com.artemzin.qualitymatters.functional_tests.espresso;
 
-import android.support.annotation.NonNull;
 import android.support.test.espresso.ViewAssertion;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewAssertions {
 

@@ -1,7 +1,7 @@
 package com.artemzin.qualitymatters.ui.other;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+import androidx.annotation.NonNull;
 
 /**
  * Simple function that modifies a {@link View} and returns modified one so the consumer should use modifier version.

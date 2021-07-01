@@ -17,7 +17,7 @@ ext.versions = [
         dexcountPlugin               : '0.6.1',
         versionsGradlePlugin         : '0.13.0',
 
-        dagger                       : '2.6',
+        dagger                       : '2.37',
 
         rxJava                       : '1.1.8',
         rxJavaProguardRules          : '1.1.8.0',
@@ -28,7 +28,7 @@ ext.versions = [
         gson                         : '2.7',
         autoValue                    : '1.2',
         autoValueGson                : '0.4.2',
-        butterKnife                  : '8.8.1',
+        butterKnife                  : '10.0.0',
         picasso                      : '2.5.2',
         picassoOkHttpDownloader      : '1.0.2',
         timber                       : '4.6.0',
@@ -78,11 +78,11 @@ ext.libraries = [
         autoValue               : "com.google.auto.value:auto-value:$versions.autoValue",
         autoValueGson           : "com.ryanharter.auto.value:auto-value-gson:$versions.autoValueGson",
 
-        supportAnnotations      : "com.android.support:support-annotations:$versions.supportLibs",
-        supportAppCompat        : "com.android.support:appcompat-v7:$versions.supportLibs",
-        supportDesign           : "com.android.support:design:$versions.supportLibs",
-        supportRecyclerView     : "com.android.support:recyclerview-v7:$versions.supportLibs",
-        supportCardView         : "com.android.support:cardview-v7:$versions.supportLibs",
+        supportAnnotations      : 'androidx.annotation:annotation:1.0.0',
+        supportAppCompat        : 'androidx.appcompat:appcompat:1.0.0',
+        supportDesign           : 'com.google.android.material:material:1.0.0',
+        supportRecyclerView     : 'androidx.recyclerview:recyclerview:1.0.0',
+        supportCardView         : 'androidx.cardview:cardview:1.0.0',
 
         butterKnife             : "com.github.JakeWharton.butterknife:butterknife:$versions.butterKnife",
         butterKnifeCompiler     : "com.github.JakeWharton.butterknife:butterknife-compiler:$versions.butterKnife",
@@ -111,8 +111,8 @@ ext.libraries = [
         equalsVerifier          : "nl.jqno.equalsverifier:equalsverifier:$versions.equalsVerifier",
         okHttpMockWebServer     : "com.squareup.okhttp3:mockwebserver:$versions.okHttp",
         mockitoCore             : "org.mockito:mockito-core:$versions.mockito",
-        supportTestRunner       : "com.android.support.test:runner:$versions.supportTestRunner",
-        supportTestRules        : "com.android.support.test:rules:$versions.supportTestRunner",
-        espressoCore            : "com.android.support.test.espresso:espresso-core:$versions.espresso",
-        espressoContrib         : "com.android.support.test.espresso:espresso-contrib:$versions.espresso",
+        supportTestRunner       : 'androidx.test.ext:junit:1.1.1',
+        supportTestRules        : 'androidx.test:rules:1.1.1',
+        espressoCore            : 'androidx.test.espresso:espresso-core:3.1.0',
+        espressoContrib         : 'androidx.test.espresso:espresso-contrib:3.1.0',
 ]

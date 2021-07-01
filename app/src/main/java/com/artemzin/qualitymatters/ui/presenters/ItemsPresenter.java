@@ -1,14 +1,12 @@
 package com.artemzin.qualitymatters.ui.presenters;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.models.AnalyticsModel;
 import com.artemzin.qualitymatters.models.ItemsModel;
 import com.artemzin.qualitymatters.other.FinishAsyncJobSubscription;
 import com.artemzin.qualitymatters.performance.AsyncJob;
 import com.artemzin.qualitymatters.performance.AsyncJobsObserver;
 import com.artemzin.qualitymatters.ui.views.ItemsView;
-
 import rx.Subscription;
 
 public class ItemsPresenter extends Presenter<ItemsView> {

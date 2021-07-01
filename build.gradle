@@ -42,6 +42,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io"}
+        google()
     }
 
     // Workaround to prevent Gradle from stealing focus from other apps during tests run/etc.

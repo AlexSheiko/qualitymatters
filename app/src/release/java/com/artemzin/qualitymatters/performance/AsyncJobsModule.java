@@ -1,6 +1,6 @@
 package com.artemzin.qualitymatters.performance;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import javax.inject.Singleton;
 

@@ -1,25 +1,26 @@
 package com.artemzin.qualitymatters.models;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.api.QualityMattersRestApi;
 import com.yandex.metrica.YandexMetrica;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
+
+import javax.inject.Singleton;
 
 @Module
 public class ModelsModule {
 
-    @Provides @NonNull @Singleton
+    @Provides
+    @NonNull
+    @Singleton
     public AnalyticsModel provideAnalyticsModel(@NonNull Application app) {
         return new YandexAppMetricaAnalytics(app);
     }
 
-    @Provides @NonNull
+    @Provides
+    @NonNull
     public ItemsModel provideItemsModel(@NonNull QualityMattersRestApi qualityMattersRestApi) {
         return new ItemsModel(qualityMattersRestApi);
     }

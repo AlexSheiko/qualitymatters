@@ -1,7 +1,6 @@
 package com.artemzin.qualitymatters.ui.views;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.performance.AnyThread;
 import okhttp3.logging.HttpLoggingInterceptor;
 

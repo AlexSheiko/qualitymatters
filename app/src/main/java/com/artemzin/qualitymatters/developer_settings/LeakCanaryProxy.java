@@ -1,6 +1,6 @@
 package com.artemzin.qualitymatters.developer_settings;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Tiny interface to hide LeakCanary from main source set.

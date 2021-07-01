@@ -1,7 +1,6 @@
 package com.artemzin.qualitymatters.api.entities;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.google.auto.value.AutoValue;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

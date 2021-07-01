@@ -3,8 +3,8 @@ package com.artemzin.qualitymatters.functional_tests;
 import android.app.Application;
 import android.app.Instrumentation;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.test.runner.AndroidJUnitRunner;
+import androidx.annotation.NonNull;
 
 public class QualityMattersFunctionalTestsRunner extends AndroidJUnitRunner {
 

@@ -1,7 +1,6 @@
 package com.artemzin.qualitymatters.ui.views;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.api.entities.Item;
 import com.artemzin.qualitymatters.performance.AnyThread;
 
@@ -9,7 +8,7 @@ import java.util.List;
 
 /**
  * Main purpose of such interfaces — hide details of View implementation,
- * such as hundred methods of {@link android.support.v4.app.Fragment}.
+ * such as hundred methods of {@link androidx.fragment.app.Fragment}.
  */
 public interface ItemsView {
 

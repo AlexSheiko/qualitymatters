@@ -1,8 +1,7 @@
 package com.artemzin.qualitymatters.functional_tests;
 
-import android.support.annotation.NonNull;
 import android.support.test.InstrumentationRegistry;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.QualityMattersApp;
 
 public class TestUtils {

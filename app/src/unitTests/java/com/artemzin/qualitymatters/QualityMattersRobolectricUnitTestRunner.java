@@ -1,7 +1,6 @@
 package com.artemzin.qualitymatters;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;

@@ -3,8 +3,7 @@ package com.artemzin.qualitymatters;
 import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.models.PicassoImageLoader;
 import com.artemzin.qualitymatters.models.QualityMattersImageLoader;
 import com.artemzin.qualitymatters.other.EntityTypeAdapterFactory;
@@ -13,13 +12,12 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapterFactory;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
-
-import javax.inject.Named;
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
+
+import javax.inject.Named;
+import javax.inject.Singleton;
 
 @Module
 public class ApplicationModule {

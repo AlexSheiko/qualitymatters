@@ -1,18 +1,16 @@
 package com.artemzin.qualitymatters.api;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.BuildConfig;
 import com.google.gson.Gson;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import javax.inject.Singleton;
 
 @Module
 public class ApiModule {

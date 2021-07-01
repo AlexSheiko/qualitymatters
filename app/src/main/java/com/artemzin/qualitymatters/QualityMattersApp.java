@@ -2,13 +2,10 @@ package com.artemzin.qualitymatters;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.annotation.NonNull;
-
-import com.artemzin.qualitymatters.api.ApiModule;
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.developer_settings.DevMetricsProxy;
 import com.artemzin.qualitymatters.developer_settings.DeveloperSettingsModel;
 import com.artemzin.qualitymatters.models.AnalyticsModel;
-
 import timber.log.Timber;
 
 public class QualityMattersApp extends Application {
@@ -23,7 +20,7 @@ public class QualityMattersApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        applicationComponent = prepareApplicationComponent().build();
+//        applicationComponent = prepareApplicationComponent().build();
 
         AnalyticsModel analyticsModel = applicationComponent.analyticsModel();
 
@@ -40,13 +37,13 @@ public class QualityMattersApp extends Application {
         }
     }
 
-    @NonNull
-    protected DaggerApplicationComponent.Builder prepareApplicationComponent() {
-        return DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this))
-                // This url may be changed dynamically for tests! See ChangeableBaseUrl.
-                .apiModule(new ApiModule("https://raw.githubusercontent.com/artem-zinnatullin/qualitymatters/master/rest_api/"));
-    }
+//    @NonNull
+//    protected DaggerApplicationComponent.Builder prepareApplicationComponent() {
+//        return DaggerApplicationComponent.builder()
+//                .applicationModule(new ApplicationModule(this))
+//                // This url may be changed dynamically for tests! See ChangeableBaseUrl.
+//                .apiModule(new ApiModule("https://raw.githubusercontent.com/artem-zinnatullin/qualitymatters/master/rest_api/"));
+//    }
 
     @NonNull
     public ApplicationComponent applicationComponent() {

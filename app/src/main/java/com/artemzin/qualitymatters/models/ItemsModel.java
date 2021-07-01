@@ -1,13 +1,11 @@
 package com.artemzin.qualitymatters.models;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.artemzin.qualitymatters.api.QualityMattersRestApi;
 import com.artemzin.qualitymatters.api.entities.Item;
+import rx.Single;
 
 import java.util.List;
-
-import rx.Single;
 
 /**
  * Model is not an entity. It's a container for business logic code. M(VC), M(VP), M(VVM).

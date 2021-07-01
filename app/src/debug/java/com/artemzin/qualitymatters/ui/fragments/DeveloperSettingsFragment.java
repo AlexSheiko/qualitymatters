@@ -4,9 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +11,10 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
+import butterknife.*;
 import com.artemzin.qualitymatters.QualityMattersApp;
 import com.artemzin.qualitymatters.R;
 import com.artemzin.qualitymatters.performance.AnyThread;
@@ -24,19 +24,11 @@ import com.artemzin.qualitymatters.ui.views.DeveloperSettingsView;
 import com.github.pedrovgs.lynx.LynxActivity;
 import com.github.pedrovgs.lynx.LynxConfig;
 import com.jakewharton.processphoenix.ProcessPhoenix;
-
-import java.util.ArrayList;
-import java.util.List;
+import okhttp3.logging.HttpLoggingInterceptor;
 
 import javax.inject.Inject;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
-import butterknife.OnClick;
-import butterknife.OnItemSelected;
-import butterknife.Unbinder;
-import okhttp3.logging.HttpLoggingInterceptor;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeveloperSettingsFragment extends BaseFragment implements DeveloperSettingsView {
 
@@ -70,9 +62,9 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
     @BindView(R.id.developer_settings_http_logging_level_spinner)
     Spinner httpLoggingLevelSpinner;
 
-    @SuppressWarnings("NullableProblems")
-    @NonNull
-    private Unbinder unbinder;
+//    @SuppressWarnings("NullableProblems")
+//    @NonNull
+//    private Unbinder unbinder;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -233,7 +225,7 @@ public class DeveloperSettingsFragment extends BaseFragment implements Developer
     @Override
     public void onDestroyView() {
         presenter.unbindView(this);
-        unbinder.unbind();
+//        unbinder.unbind();
         super.onDestroyView();
     }
 

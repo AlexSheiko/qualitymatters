@@ -1,6 +1,6 @@
 package com.artemzin.qualitymatters.ui.other;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 public class NoOpViewModifier implements ViewModifier {

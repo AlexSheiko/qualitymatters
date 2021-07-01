@@ -1,6 +1,6 @@
 package com.artemzin.qualitymatters.developer_settings;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class NoOpLeakCanaryProxy implements LeakCanaryProxy {
     @Override

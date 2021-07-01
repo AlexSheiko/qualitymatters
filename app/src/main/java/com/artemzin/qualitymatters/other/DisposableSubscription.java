@@ -1,11 +1,10 @@
 package com.artemzin.qualitymatters.other;
 
-import android.support.annotation.NonNull;
-
-import java.util.concurrent.atomic.AtomicBoolean;
-
+import androidx.annotation.NonNull;
 import rx.Subscription;
 import rx.functions.Action0;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DisposableSubscription implements Subscription {
 

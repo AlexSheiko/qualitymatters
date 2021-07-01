@@ -1,18 +1,15 @@
 package com.artemzin.qualitymatters.network;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
-
-import java.util.List;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.Interceptor;
 import okhttp3.logging.HttpLoggingInterceptor;
 import timber.log.Timber;
+
+import javax.inject.Singleton;
+import java.util.List;
 
 import static java.util.Collections.singletonList;
 

@@ -1,9 +1,7 @@
 package com.artemzin.qualitymatters.ui.presenters;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.google.auto.value.AutoValue;
-
 import rx.Scheduler;
 
 // Such approach allows us configure presenter in runtime without hardcoded values.
